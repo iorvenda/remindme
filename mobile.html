@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>preview</title>
+    <script type="text/javascript">
+
+    </script>
+    <style media="screen">
+      html,body{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+
+      }
+      .main_content{
+        margin: 2px;
+      }
+      .image img{
+
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: blue;
+        display: block;
+        margin: auto;margin-top:30px;
+        object-fit:cover;
+      }
+      .make_changes{background-color:#f2e6ff;
+
+        display: flex;
+        margin: 0;
+     position: absolute;
+     top: 30%;
+    left: 50%;
+     -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      }
+      .make_changes button{
+        margin: 16px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: lightblue;
+      }
+
+    </style>
+    <script>
+      function settings() {
+        window.location.href ="settings.html";
+      }
+      function edit() {
+        window.location.href ="edit.html";
+      }
+    </script>
+  </head>
+  <body>
+      <div class="main_content">
+        <div class="">
+          <div class="image">
+            <img src="2.jpg" alt="profile Image">
+          </div>
+          <div class="make_changes">
+            <div class="">
+              <button type="button" onclick="settings()"name="button">Settings</button>
+            </div>
+            <div class="">
+              <button type="button" onclick="edit()"name="button">Edit</button>
+            </div>
+            <div class="">
+              <button type="button" name="button">Search</button>
+            </div>
+          </div>
+          <div class="information">
+            <label for="name"></label>
+            <label for="age"></label>
+            <label for="sch"></label>
+            <label for="major"></label>
+          </div>
+        </div>
+      </div>
+
+  </body>
+</html>

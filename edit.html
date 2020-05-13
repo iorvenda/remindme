@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit</title>
+    <style media="screen">
+    *{
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    html body{
+      width: 100%;
+    }
+    .done button{
+      width:60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #9933ff;
+      color:white;
+      display: block;
+      margin: auto;
+    }
+    .images{
+       display: grid;
+       grid-template-columns:33.3% 33.3% 33.3%;
+       width: 360px;
+      height: 200px;
+      margin: auto;
+      background-color: lightgray;
+      }.images img{
+        width:80px;
+        height: 80px;
+        border-radius: 10px;
+
+      }
+      #about_label{
+        display: block;
+        text-align: center;
+      }
+      #about{
+        display: block;
+        margin: auto;
+
+        width: 375px;
+      }
+      .information:nth-child(odd){
+        background-color: #f2f2f2;
+        width: 375px;
+        display: block;
+        margin: auto;
+        box-sizing: border-box;
+      }
+      .information input{
+        width:100%;
+        margin:auto;
+      }
+  </style>
+    </style>
+    <script>
+      function done()
+      {
+        window.location.href ="mobile.html";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="main_content">
+      <h1>edit</h1>
+
+        <div class="images">
+          <div class="">
+<img src="1.jpg" alt="">
+          </div>
+          <div class="">
+<img src="1.jpg" alt="">
+          </div>
+          <div class="">
+<img src="1.jpg" alt="">
+          </div>
+          <div class="">
+<img src="1.jpg" alt="">
+          </div>
+          <div class="">
+<img src="1.jpg" alt="">
+          </div>
+          <div class="">
+<img src="1.jpg" alt="">
+          </div>
+        </div>
+        <div class="information">
+          <label id="about_label">About ${name}</label>
+          <textarea id="about"name="name" rows="8" cols="80"  ></textarea>
+          <label for="">School</label>
+          <input type="text" name="" placeholder="School"value="">
+          <label>major</label>
+          <input type="text" name=""placeholder="Major" value="">
+          <label for="">Gender</label>
+          <input type="text" name=""placeholder="Gender" value="">
+
+        </div>
+        <div class="done">
+        <button type="button" onclick="done()"name="button"><strong>DONE</strong></button>
+      </div>
+    </div>
+  </body>
+</html>
