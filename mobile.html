@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>preview</title>
-    <script type="text/javascript">
+    <script>
 
     </script>
     <style media="screen">
@@ -12,31 +12,33 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-
-
+        width: 375px;
       }
       .main_content{
+        display: grid;
+        grid-template-columns: auto;
         margin: 2px;
       }
+      .image{
+        margin: 20px;
+      }
       .image img{
-
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        background-color: blue;
-        display: block;
-        margin: auto;margin-top:30px;
         object-fit:cover;
+        display:block;
+        margin:auto;
       }
-      .make_changes{background-color:#f2e6ff;
-
+      .make_changes{
         display: flex;
-        margin: 0;
+        margin-top: 55px;
      position: absolute;
-     top: 30%;
+     top: 20%;
     left: 50%;
      -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
+
       }
       .make_changes button{
         margin: 16px;
@@ -45,6 +47,11 @@
         border-radius: 50%;
         background-color: lightblue;
       }
+      #information{
+        display: block;
+        text-align: center;
+        margin-top: 180px;
+      }
 
     </style>
     <script>
@@ -52,7 +59,11 @@
         window.location.href ="settings.html";
       }
       function edit() {
-        window.location.href ="edit.html";
+        window.location.href = "edit.html";
+      }
+      function search()
+      {
+         window.location.href = "search.html";
       }
     </script>
   </head>
@@ -64,22 +75,23 @@
           </div>
           <div class="make_changes">
             <div class="">
-              <button type="button" onclick="settings()"name="button">Settings</button>
+              <button type="button" onclick="settings()" name="button">Settings</button>
             </div>
             <div class="">
               <button type="button" onclick="edit()"name="button">Edit</button>
             </div>
             <div class="">
-              <button type="button" name="button">Search</button>
+              <button type="button" onclick="search()"name="button">Search</button>
             </div>
           </div>
-          <div class="information">
-            <label for="name"></label>
-            <label for="age"></label>
-            <label for="sch"></label>
-            <label for="major"></label>
+          <div id="information">
+            <label  id="name"name="name">James Barns</label><br>
+            <label id="age" name="age">22</label><br>
+            <label id="sch" name="sch">Janna Nursing School</label><br>
+            <label id="major" name="major">Nursing</label><br>
           </div>
         </div>
+
       </div>
 
   </body>
