@@ -7,8 +7,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <title>Remind Me</title>
   <style media="screen">
+@media only screen and (max-width: 414px) {
   body{
   padding: 0;
   margin: 0;
@@ -16,6 +18,9 @@
   background-color: white;
   font-size: 100%;
   height: 100%;
+  width: auto!important;
+   overflow-x: hidden!importan;
+   overflow-y: hidden!importan;
   }
   .header{
     border-bottom: solid 2px #9bacdb;
@@ -50,11 +55,12 @@ margin: 4px 4px 0px 4px;
     background-color: #9bacdb;
   }
   #setSchedule_calendar{
-    background-color:white;
+    background-color: lightblue;
     width: 100%;
-    height: 100%;
+    height: 80%;
     margin: 0 auto;
       padding: 12px;
+    margin-top: 10px;
     position: absolute;
     z-index: 10;
   }
@@ -78,6 +84,22 @@ margin: 4px 4px 0px 4px;
    border: none;
    background-color: lightgreen;
   }
+  #notifications{
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+    width: 400px;
+ position: absolute;
+ z-index: 10;
+ background-color: lightblue;
+
+   padding: 12px;
+  }
+  #notifications input textarea{
+    display: block;
+    margin: 0 auto;
+  }
+}
   </style>
   </head>
   <body>
@@ -93,18 +115,21 @@ margin: 4px 4px 0px 4px;
              document.getElementById('setSchedule_calendar').style.display='block';
 
            }
-
+       function set_notifications(){
+         document.getElementById('notifications').style.display='block';
+         document.getElementById('setSchedule_calendar').style.display='none';
+                    }
          </script>
          <label>Set-Up Schdule</label>
 
        </div>
        <div id="setSchedule_calendar" style="display:none">
           <form class="" action="" method="post">
-            <input  type="text" name="" placeholder="Name"value=""><br>
+            <input  type="text" name="" placeholder="Title"value=""><br>
+            <input type="textfield" name="" placeholder="Description"value=""><br>
             <input type="date" name="" placeholder="Name"value=""><br>
-            <input type="textfield" name="" placeholder="description"value=""><br>
             <input type="time" name="" placeholder="Name"value=""><br>
-            <input type="text" name="" placeholder="Name"value=""><br>
+            <input type="button" onclick="set_notifications()" name="Set Notifications"value="Set Notifications"><br>
             <button type="submit" onclick="finish"name="button">Finish</button>
             <script>
               function finish() {
@@ -116,6 +141,14 @@ margin: 4px 4px 0px 4px;
             </script>
 
           </form>
+
+       </div>
+       <div id="notifications" style="display:none">
+         <input  type="text" name="" placeholder="Title"value=""><br>
+         <textarea></textarea><br><br>
+         <input type="date" name="" placeholder="Name"value=""><br>
+         <input type="time" name="" placeholder="Name"value=""><br>
+         <button type="submit" onclick="finish"name="button">Finish</button>
 
        </div>
        <div id="Schedules">
