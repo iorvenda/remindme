@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style media="screen">
+
+    #setSchedule_calendar{
+      background-color: lightblue;
+      width: 90%;
+      height: 80%;
+      margin: 0 auto;
+        padding: 12px;
+      margin-top: 10px;
+    }
+    #setSchedule_calendar input{
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+      box-sizing: border-box;
+      padding: 12px 20px;
+      border: solid 1px #9bacdb;;
+      border-radius: 4px;
+      color: lightgray;
+      width: 80%;
+    }
+    #setSchedule_calendar button{
+      display: block;
+      margin:0 auto;
+     width: 60%;
+     padding: 12px 20px;
+     border-radius: 8px;
+     border: none;
+     background-color: lightgreen;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="setSchedule_calendar" >
+       <form class="index.html" action="" method="post">
+         <input  type="text" name="" placeholder="Name"value=""><br>
+         <input type="date" name="" placeholder="Name"value=""><br>
+         <input type="textfield" name="" placeholder="description"value=""><br>
+         <input type="time" name="" placeholder="Name"value=""><br>
+         <input type="text" name="" placeholder="Name"value=""><br>
+         <button type="submit" onclick="finish"name="button">Finish</button>
+         <script>
+           function finish() {
+              location.replace("schduleApp.html");
+           }
+         </script>
+
+       </form>
+
+    </div>
+  </body>
+</html>
