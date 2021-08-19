@@ -3,57 +3,129 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <style media="screen">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Remind Me</title>
+  <style media="screen">
+  body{
+  padding: 0;
+  margin: 0;
+  color:white;
+  background-color: white;
+  font-size: 100%;
+  height: 100%;
+  }
+  .header{
+    border-bottom: solid 2px #9bacdb;
+  color:#9bacdb;
+  text-align: center;
+  font-size: 2.5em;
+  padding: 40px 10px 40px 0px;
+  background-color: white;
+margin: 4px 4px 0px 4px;
+}
+ #header{
 
-    #setSchedule_calendar{
-      background-color: lightblue;
-      width: 90%;
-      height: 80%;
-      margin: 0 auto;
-        padding: 12px;
-      margin-top: 10px;
-    }
-    #setSchedule_calendar input{
-      text-align: center;
-      margin: 0 auto;
-      display: block;
-      box-sizing: border-box;
-      padding: 12px 20px;
-      border: solid 1px #9bacdb;;
-      border-radius: 4px;
-      color: lightgray;
-      width: 80%;
-    }
-    #setSchedule_calendar button{
-      display: block;
-      margin:0 auto;
-     width: 60%;
-     padding: 12px 20px;
-     border-radius: 8px;
-     border: none;
-     background-color: lightgreen;
-    }
-    </style>
+ }
+.main{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+  #setSchedule{
+    margin-top: 10%;
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+    border: 2px solid #d6d6d6;
+    border-radius: 10px;
+    background-color: #9bacdb;
+  }
+  #Schedules{
+    margin-top: 10%;
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+    border: 2px solid #d6d6d6;
+    border-radius: 10px;
+    background-color: #9bacdb;
+  }
+  #setSchedule_calendar{
+    background-color: lightblue;
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+      padding: 12px;
+
+    margin-top: 10px;
+  }
+  #setSchedule_calendar input{
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    border: solid 1px #9bacdb;;
+    border-radius: 4px;
+    color: lightgray;
+    width: 80%;
+  }
+  #setSchedule_calendar button{
+    display: block;
+    margin:0 auto;
+   width: 60%;
+   padding: 12px 20px;
+   border-radius: 8px;
+   border: none;
+   background-color: lightgreen;
+  }
+  </style>
   </head>
   <body>
-    <div id="setSchedule_calendar" >
-       <form class="index.html" action="" method="post">
-         <input  type="text" name="" placeholder="Name"value=""><br>
-         <input type="date" name="" placeholder="Name"value=""><br>
-         <input type="textfield" name="" placeholder="description"value=""><br>
-         <input type="time" name="" placeholder="Name"value=""><br>
-         <input type="text" name="" placeholder="Name"value=""><br>
-         <button type="submit" onclick="finish"name="button">Finish</button>
+    <div class="body">
+      <div class="header">
+        <label id="header">Remind Me</label>
+      </div>
+      <div class="main">
+       <div id="setSchedule" onclick="setSchedule()">
          <script>
-           function finish() {
-              location.replace("schduleApp.html");
+           function setSchedule() {
+             document.getElementById('setSchedule').style.display='none';
+
+             //document.getElementById('setSchedule_calendar').style.display='block';
+ window.open("set_schedule.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
            }
+
          </script>
+         <label>Set-Up Schdule</label>
 
-       </form>
+       </div>
+       <div id="setSchedule_calendar" style="display:none">
+          <form class="" action="" method="post">
+            <input  type="text" name="" placeholder="Name"value=""><br>
+            <input type="date" name="" placeholder="Name"value=""><br>
+            <input type="textfield" name="" placeholder="description"value=""><br>
+            <input type="time" name="" placeholder="Name"value=""><br>
+            <input type="text" name="" placeholder="Name"value=""><br>
+            <button type="submit" onclick="finish"name="button">Finish</button>
+            <script>
+              function finish() {
+                document.getElementById('setSchedule').style.display='block';
 
+                document.getElementById('setSchedule_calendar').style.display='none';
+
+              }
+            </script>
+
+          </form>
+
+       </div>
+       <div id="Schedules">
+         <label>My Schedules</label>
+       </div>
+      </div>
+      <div class="footer">
+        <footer></footer>
+      </div>
     </div>
   </body>
 </html>
-
