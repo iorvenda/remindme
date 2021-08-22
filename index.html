@@ -10,10 +10,13 @@
    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <title>Remind Me</title>
   <style media="screen">
-@media only screen and (max-width: 414px) {
-  body{
+@media only screen and (max-width: 904px) {
+*{
   padding: 0;
   margin: 0;
+}
+  body{
+
   color:white;
   background-color: white;
   font-size: 100%;
@@ -21,6 +24,7 @@
   width: auto!important;
    overflow-x: hidden!importan;
    overflow-y: hidden!importan;
+   max-width:414px;
   }
   .header{
     border-bottom: solid 2px #9bacdb;
@@ -45,6 +49,7 @@ margin: 4px 4px 0px 4px;
     border: 2px solid #d6d6d6;
     border-radius: 10px;
     background-color: #9bacdb;
+    width: 414px;
   }
   #Schedules{
     margin-top: 10%;
@@ -53,16 +58,20 @@ margin: 4px 4px 0px 4px;
     border: 2px solid #d6d6d6;
     border-radius: 10px;
     background-color: #9bacdb;
+    width: 414px;
   }
   #setSchedule_calendar{
     background-color: lightblue;
-    width: 100%;
+    width: 414px;
     height: 80%;
-    margin: 0 auto;
+    margin: 0;
       padding: 12px;
     margin-top: 10px;
+
     position: absolute;
     z-index: 10;
+    border-radius: 10px;
+    padding: 20px 20px;
   }
   #setSchedule_calendar input{
     text-align: center;
@@ -86,18 +95,24 @@ margin: 4px 4px 0px 4px;
   }
   #notifications{
     display: block;
-    margin: 0 auto;
-    height: 100%;
-    width: 400px;
- position: absolute;
- z-index: 10;
- background-color: lightblue;
-
-   padding: 12px;
+   background-color: lightblue;
+   width: 414px;
+   height: 80%;
+   margin: 0;
+   position: absolute;
+   z-index: 10;
+   border-radius: 10px;
+   padding: 40px 40px;
   }
-  #notifications input textarea{
+  #notifications input,textarea, button{
     display: block;
     margin: 0 auto;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    border: none;
   }
 }
   </style>
@@ -136,7 +151,7 @@ margin: 4px 4px 0px 4px;
                 document.getElementById('setSchedule').style.display='block';
 
                 document.getElementById('setSchedule_calendar').style.display='none';
-
+                document.getElementById('notifications').style.display='none';
               }
             </script>
 
@@ -145,10 +160,10 @@ margin: 4px 4px 0px 4px;
        </div>
        <div id="notifications" style="display:none">
          <input  type="text" name="" placeholder="Title"value=""><br>
-         <textarea></textarea><br><br>
+         <textarea editable="true"> Notes</textarea><br><br>
          <input type="date" name="" placeholder="Name"value=""><br>
          <input type="time" name="" placeholder="Name"value=""><br>
-         <button type="submit" onclick="finish"name="button">Finish</button>
+         <button type="submit" onclick="finish()"name="button">Next</button>
 
        </div>
        <div id="Schedules">
